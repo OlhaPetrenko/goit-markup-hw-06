@@ -184,9 +184,11 @@ img {
   text-transform: uppercase;
 }
 
-.hero .button {
+.hero .button,
+.subscrip-button,
+.form-button {
   min-width: 200px;
-  padding: 10px 32px;
+  padding: 10px 10px;
   border-width: 0;
 
   color: var(--primery-background-color);
@@ -194,7 +196,7 @@ img {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -469,6 +471,9 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms var(--timing-function);
 }
+.social {
+  margin-right: 93px;
+}
 
 .social .social-link:hover,
 .social .social-link:focus {
@@ -481,7 +486,8 @@ img {
   fill: var(--primery-background-color);
 }
 
-.social-title {
+.social-title,
+.subscrip-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -489,6 +495,25 @@ img {
   color: var(--primery-background-color);
   margin-bottom: 20px;
   margin-top: 0;
+}
+
+.subscrip-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+.subscrip-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscrip-icon {
+  margin-left: 10px;
+  fill: var(--primery-background-color);
 }
 
 /* Страница  Portfolio */
@@ -501,7 +526,6 @@ img {
   margin-right: 8px;
 }
 
-/* Button */
 .button {
   min-width: 73px;
   padding: 6px 22px;
@@ -714,6 +738,20 @@ img {
 .form-field.comment {
   margin-bottom: 20px;
 }
+.form-field.comment .comment-text {
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field.comment .comment-text::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
 
 .form-field.policy {
   flex-direction: row;
@@ -728,19 +766,10 @@ img {
   color: var(--accent-color);
 }
 .form-button {
-  min-width: 200px;
-  min-height: 50px;
   margin-right: auto;
   margin-left: auto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+}
 
-  color: var(--primery-background-color);
-  background-color: var(--accent-color);
-  background: #2196f3;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+.form-button:hover {
+  background-color: #188ce8;
 }
