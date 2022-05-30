@@ -516,6 +516,13 @@ img {
   fill: var(--primery-background-color);
 }
 
+.subscrip .subscrip-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Страница  Portfolio */
 
 .filter {
@@ -705,6 +712,12 @@ img {
 .modal-icon {
   fill: #000000;
 }
+
+.modal-button:hover .modal-icon,
+.modal-button:focus .modal-icon {
+  fill: var(--accent-color);
+}
+
 .modal-title {
   margin-top: 0;
   margin-bottom: 12px;
@@ -716,6 +729,7 @@ img {
 /* Форма */
 
 .form-field {
+  position: relative;
   flex-direction: column;
   margin-bottom: 10px;
 }
@@ -733,6 +747,26 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 11px 12px;
+  padding-left: 42px;
+  outline: none;
+}
+
+.form-icon {
+  position: absolute;
+  top: 28px;
+  left: 12px;
+  fill: var(--primary-text-color);
+  pointer-events: none;
+}
+
+.form-field:hover .form-icon,
+.form-field:focus-within .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-field:hover .form-input,
+.form-field:focus-within .form-input {
+  border: 1px solid #2196f3;
 }
 
 .form-field.comment {
@@ -742,6 +776,13 @@ img {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+.form-field:hover .comment-text,
+.form-field:focus-within .comment-text {
+  border: 1px solid #2196f3;
 }
 
 .form-field.comment .comment-text::placeholder {
@@ -753,18 +794,47 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field.policy {
+.checkbox-label {
   flex-direction: row;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  align-items: center;
 }
-
-.policy .form-input {
-  margin-right: 8px;
+.policy-checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .policy-link {
   color: var(--accent-color);
 }
+
+.policy-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  /* background-color: red; */
+  border: 2px solid #212121;
+
+  border-radius: 4px;
+}
+
+.policy-checkbox:checked + .policy-icon {
+  border: transparent;
+  /* background-color: var(--accent-color); */
+  background-image: url(../images/icons/icon-check.svg);
+  /* background-size: contain;
+  background-origin: border-box; */
+}
+
 .form-button {
   margin-right: auto;
   margin-left: auto;
