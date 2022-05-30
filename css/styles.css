@@ -507,7 +507,7 @@ img {
   background-color: transparent;
 }
 .subscrip-button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
@@ -687,7 +687,7 @@ img {
   left: 50%;
   padding: 40px;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   background-color: var(--primery-background-color);
   transform: translate(-50%, -50%) scale(1);
 
@@ -711,11 +711,18 @@ img {
 
 .modal-icon {
   fill: #000000;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .modal-button:hover .modal-icon,
 .modal-button:focus .modal-icon {
   fill: var(--accent-color);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  outline: transparent;
 }
 
 .modal-title {
@@ -746,17 +753,21 @@ img {
 .form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 11px 12px;
+  padding: 12px 11px;
   padding-left: 42px;
-  outline: none;
+  outline: transparent;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .form-icon {
   position: absolute;
-  top: 28px;
+  bottom: 11px;
   left: 12px;
   fill: var(--primary-text-color);
   pointer-events: none;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .form-field:hover .form-icon,
@@ -776,8 +787,10 @@ img {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: none;
+  outline: transparent;
   resize: none;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .form-field:hover .comment-text,
@@ -811,6 +824,11 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
+.checkbox-text {
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
 
 .policy-link {
   color: var(--accent-color);
@@ -821,7 +839,6 @@ img {
   width: 16px;
   height: 15px;
   margin-right: 8px;
-  /* background-color: red; */
   border: 2px solid #212121;
 
   border-radius: 4px;
@@ -838,8 +855,12 @@ img {
 .form-button {
   margin-right: auto;
   margin-left: auto;
+
+  transition: background-color 2250ms var(--timing-function);
 }
 
-.form-button:hover {
+.form-button:hover,
+.form-button:focus {
   background-color: #188ce8;
+  outline: transparent;
 }
