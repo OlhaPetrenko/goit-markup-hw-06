@@ -505,7 +505,9 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
 }
+
 .subscrip-button {
   display: inline-flex;
   justify-content: center;
@@ -755,6 +757,7 @@ img {
   border-radius: 4px;
   padding: 12px 11px;
   padding-left: 42px;
+  height: 40px;
   outline: transparent;
 
   transition: border 250ms var(--timing-function);
@@ -811,6 +814,7 @@ img {
   flex-direction: row;
   margin-bottom: 30px;
   align-items: center;
+  justify-content: center;
 }
 .policy-checkbox {
   position: absolute;
@@ -846,17 +850,20 @@ img {
 
 .policy-checkbox:checked + .policy-icon {
   border: transparent;
-  /* background-color: var(--accent-color); */
   background-image: url(../images/icons/icon-check.svg);
-  /* background-size: contain;
-  background-origin: border-box; */
+}
+
+.policy-checkbox:focus-within + .policy-icon {
+  border: transparent;
+  background-image: url(../images/icons/icon-check.svg);
 }
 
 .form-button {
+  display: block;
   margin-right: auto;
   margin-left: auto;
 
-  transition: background-color 2250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .form-button:hover,
